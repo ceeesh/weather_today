@@ -1,0 +1,9 @@
+<p class="text-center"><%= @data["weather"].first["main"]%></p>
+
+<div class="w-full text-center">
+<p><%= Date.today.strftime("%A, %B %d")%></p>
+<img class="mx-auto" src="http://openweathermap.org/img/wn/<%= @data["weather"].first["icon"] %>@2x.png"/>
+<p><%= @data["weather"].first["main"]%></p>
+<p class="text-sm"><%= @data["weather"].first["description"]%></p>
+<p><%= @data["main"]["temp"]%> <span class="">Fahrenheit</span></p>
+</div>
